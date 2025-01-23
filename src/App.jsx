@@ -1,5 +1,5 @@
 import reactImg from './assets/react-core-concepts.png'
-
+import React from 'react';
 
 function HeaderComponent() {
   return (
@@ -21,6 +21,7 @@ function CoreConcept(){
 function App() {
   return (
     <div>
+      asdasdasd
       <HeaderComponent />
       <main>
         <section id='core-concepts'></section>
