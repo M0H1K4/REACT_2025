@@ -1,5 +1,7 @@
-import reactImg from './assets/react-core-concepts.png'
-import React from 'react';
+import reactImg from "./assets/react-core-concepts.png";
+import React from "react";
+import stateImg from "./assets/state-mgmt.png";
+import { CORE_CONCEPTS } from "./data";
 
 function HeaderComponent() {
   return (
@@ -14,18 +16,32 @@ function HeaderComponent() {
   );
 }
 
-function CoreConcept(){
-  
+function CoreConcept(props) {
+  return (
+    <li>
+      <img src={props.image} alt={props.title} />
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
+    </li>
+  );
 }
 
 function App() {
+  const namesArray = ["Luka", "Mate", "Giorgi"];
+
   return (
     <div>
-      asdasdasd
-      <HeaderComponent />
       <main>
-        <section id='core-concepts'></section>
-        <h2>Core Concepts</h2>
+        <HeaderComponent />
+        <section id="core-concepts">
+          <h2>Core Concepts</h2>
+          <ul>
+            <CoreConcept {...CORE_CONCEPTS[0]} />
+            <CoreConcept {...CORE_CONCEPTS[1]} />
+            <CoreConcept {...CORE_CONCEPTS[2]} />
+            <CoreConcept {...CORE_CONCEPTS[3]} />
+          </ul>
+        </section>
       </main>
     </div>
   );
