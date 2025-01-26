@@ -1,9 +1,13 @@
 import React from "react";
 
-export default function TabButton({children}) {
+export default function TabButton({ children }) {
+  function handleClick() {
+    console.log("Hello world");
+  }
+
   return (
     <li>
-      <button>{children}</button>
+      <button onClick={handleClick}>{children}</button>
     </li>
   );
 }
