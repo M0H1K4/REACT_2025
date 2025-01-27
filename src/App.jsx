@@ -6,18 +6,21 @@ import Header from "./components/Header";
 import CoreConcept from "./components/CoreConcepts";
 import TabButton from "./components/TabButton";
 import { EXAMPLES } from "./data";
+import TestComponent from "./components/TestComponent";
 
 function App() {
-  const [selectedTopic, setSelectedTopic] = useState("");
+  // const [selectedTopic, setSelectedTopic] = useState("");
 
-  function handleSelect(selectedButton) {
-    setSelectedTopic(selectedButton);
-    console.log(setSelectedTopic);
-  }
+  // function handleSelect(selectedButton) {
+  //   setSelectedTopic(selectedButton);
+  //   console.log(setSelectedTopic);
+  // }
+
+
 
   return (
     <div>
-      <main>
+      {/* <main>
         <Header />
         <section id="core-concepts">
           <h2>Core Concepts</h2>
@@ -66,8 +69,9 @@ function App() {
             </div>
           )}
         </section>
-      </main>
-    </div>
+      </main> */}
+          <TestComponent text={"Hello world"} image={stateImg}/>
+    </div>  
   );
 }
 
